@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/logbg"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/basic_info_layout"
+            >
+            <TextView
+                android:id="@+id/upload_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="Please send in your updated profile and our HR team will get in touch soon."/>
+            <EditText
+                android:layout_below="@+id/upload_profile"
+                android:id="@+id/activity_register_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_outline"
+                android:hint="Full Name"
+                android:textColorHint="#fff"
+                android:text=""
+                android:textColor="@color/textcolor"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/activity_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_register_username"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/input_outline"
+                android:hint="Email"
+                android:textColor="@color/textcolor"
+                android:textColorHint="#fff"
+
+                android:enabled="false"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/activity_alt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_register_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/input_outline"
+                android:hint="Alternate Email"
+                android:textColorHint="#fff"
+                android:visibility="gone"
+                android:textColor="@color/textcolor"
+
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textSize="16dp" />
+            <EditText
+                android:id="@+id/activity_phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_alt_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/textcolor"
+                android:textColorHint="#fff"
+
+                android:background="@drawable/input_outline"
+                android:hint="Mobile No"
+                android:inputType="text"
+                android:maxLines="1"
+                android:enabled="false"
+                android:padding="16dp"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/activity_residence_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_phone_no"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/textcolor"
+                android:textColorHint="#fff"
+                android:background="@drawable/input_outline"
+                android:hint="Interested In"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/activity_office_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_residence_add"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="#fff"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/textcolor"
+                android:background="@drawable/input_outline"
+                android:hint="About Yourself (Max limit:400)"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:textSize="16dp" />
+
+
+            <Button
+                android:id="@+id/update_profile"
+                android:layout_below="@+id/activity_office_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/activity_office_add"
+                android:background="@drawable/custom_edittext"
+                android:textColor="#ffffff"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Send"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/update_profile"/>
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:background="#fff"
+    android:layout_margin="5dp"
+        >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_marginTop="30dp"
+        android:weightSum="7">
+
+
+        <com.rey.material.widget.CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.3" />
+
+        <TextView
+            android:id="@+id/srno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            android:layout_marginLeft="10dp"
+
+            android:gravity="center"
+            android:text=""
+            android:textColor="#000000" />
+
+
+        <custom_font.MyTextView_Lato
+            android:id="@+id/total_seat_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Total Seat: "
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <custom_font.MyTextView_Lato
+            android:id="@+id/total_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/total_seat_txt"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/total_seat_txt"
+            android:layout_weight="0.4"
+            android:text=""
+
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+
+        <custom_font.MyTextView_Lato
+            android:id="@+id/seat_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/total_seat_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Seat: "
+            android:textColor="#000000"
+
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/seat_txt"
+            android:layout_toRightOf="@+id/seat_txt"
+            android:background="@mipmap/minus1"/>
+
+        <TextView
+            android:id="@+id/seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/seat_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/minus"
+            android:text="0"
+            android:textColor="#000"
+            android:textSize="18dp"
+
+            android:layout_weight="0.5" />
+
+        <ImageView
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/seat_txt"
+            android:layout_toRightOf="@+id/seat"
+            android:layout_marginLeft="10dp"
+
+            android:background="@mipmap/plus1"/>
+        <custom_font.MyTextView_Lato
+            android:id="@+id/per_seat_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/seat_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Per Seat Price: "
+            android:textColor="#000000"
+
+            android:textSize="18dp" />
+
+        <custom_font.MyTextView_Lato
+            android:id="@+id/per_seat_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/per_seat_txt"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:text="230"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:layout_toRightOf="@+id/per_seat_txt"
+            android:layout_weight="0.5" />
+
+        <custom_font.MyTextView_Lato
+            android:id="@+id/trip_type_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/per_seat_txt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Trip Type: "
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/trip_type"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+
+            android:layout_alignBottom="@+id/trip_type_txt"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/trip_type_txt"
+           ></Spinner>
+
+
+
+
+        <custom_font.MyTextView_Lato
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="#000"
+
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+
+    <custom_font.MyTextView_Lato
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:padding="10dp"
+        android:background="@color/textcolor1"
+        android:text="12/05/2017"/>
+</android.support.v7.widget.CardView>

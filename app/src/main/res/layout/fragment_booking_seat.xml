@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="paztechnologies.com.meribus.Booking_seat">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:layout_above="@+id/total_layout">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/total_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp">
+
+        <custom_font.MyTextView_Lato
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="28dp"
+            android:textColor="#fff"
+            android:text="TOTAL"/>
+        <custom_font.MyTextView_Lato
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="28dp"
+            android:textColor="#fff"
+            android:text=""/>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/select_ride_custom"
+            android:text="Submit"
+            android:textSize="18dp" />
+    </RelativeLayout>
+</RelativeLayout>

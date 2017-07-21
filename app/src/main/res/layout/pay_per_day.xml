@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logbg"
+    android:orientation="vertical"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        android:isScrollContainer="true"
+        android:orientation="vertical"
+        >
+
+        <RadioGroup
+            android:id="@+id/radio_grp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="3">
+
+            <RadioButton
+                android:id="@+id/both"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Both"
+                android:textColor="#ffffff"
+                app:buttonTint="@color/background" />
+
+            <RadioButton
+
+                android:id="@+id/pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pickup"
+                android:textColor="#ffffff"
+                app:buttonTint="@color/background" />
+
+            <RadioButton
+                android:id="@+id/drop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drop"
+                android:textColor="#ffffff"
+                app:buttonTint="@color/background" />
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/two_way_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_phone_no"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:background="@color/textcolor1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/two_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/two_way"/>
+
+            <ToggleButton
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/two_way_toggle"
+                android:checked="false"
+
+                android:textOff=""
+                android:textOn="" />
+
+            <paztechnologies.com.meribus.custom_font.MyTextView_Lato
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/two_way"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/two_way"
+                android:layout_toRightOf="@+id/two_way"
+                android:text="Two Directions"
+                android:textColor="@color/textcolor2"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/start_end_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/start_date"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <Spinner
+                android:id="@+id/start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/img"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/clock_icon"
+                android:drawablePadding="15dp"
+                android:padding="10dp"
+
+                android:textColorHint="@color/textcolor2"
+                android:textSize="17dp"
+                app:backgroundTint="@color/textcolor1" />
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/round"
+                />
+
+            <Spinner
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/img"
+                android:drawableLeft="@mipmap/clock_icon"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:textColorHint="@color/textcolor2"
+                android:textSize="17dp"
+                app:backgroundTint="@color/textcolor1" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:background="@color/textcolor"></View>
+        </RelativeLayout>
+
+
+        <Spinner
+            android:id="@+id/select_route"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio_grp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/m_location"
+            android:drawablePadding="5dp"
+            android:hint="PickUp Point"
+            android:padding="20dp"
+            android:textColorHint="@color/textcolor2"
+            android:textSize="17dp"
+            app:backgroundTint="@color/textcolor1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@+id/select_route"
+            android:layout_marginBottom="10dp"
+            android:background="@color/textcolor" />
+
+        <Spinner
+            android:id="@+id/current_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio_grp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/m_location"
+            android:drawablePadding="5dp"
+            android:padding="20dp"
+
+            android:textColorHint="@color/textcolor2"
+            android:textSize="17dp"
+            app:backgroundTint="@color/textcolor1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@+id/current_location"
+            android:layout_marginBottom="10dp"
+            android:background="@color/textcolor" />
+
+        <Spinner
+            android:id="@+id/des_location"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/current_location"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/destination_icon"
+            android:drawablePadding="5dp"
+            android:hint="Drop Point"
+            android:padding="20dp"
+            android:textColorHint="@color/textcolor2"
+            android:textSize="17dp"
+            app:backgroundTint="@color/textcolor1"
+
+            ></Spinner>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignBottom="@+id/des_location"
+            android:layout_marginBottom="20dp"
+            android:background="@color/textcolor" />
+
+
+        <paztechnologies.com.meribus.custom_font.MyTextView_Lato
+            android:id="@+id/start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/two_way_layout"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/date_icon"
+            android:drawablePadding="5dp"
+            android:hint="Start Date"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            android:textColorHint="@color/textcolor2"
+            android:textSize="17dp"
+            app:backgroundTint="#f3d02a"></paztechnologies.com.meribus.custom_font.MyTextView_Lato>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/select_ride_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/start_end_layout"
+            android:layout_marginTop="10dp"
+            android:background="@color/textcolor1">
+
+            <paztechnologies.com.meribus.custom_font.MyTextView_Lato
+                android:id="@+id/select_any_ride"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Select Any Ride"
+                android:textSize="17dp"
+
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_any_ride"
+                android:layout_marginTop="10dp"
+                android:weightSum="3">
+                <ToggleButton
+                    android:id="@+id/nonac_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/nonac_toggle"
+                    android:textOff=""
+                    android:textOn=""
+
+                    />
+
+                <paztechnologies.com.meribus.custom_font.MyTextView_Lato
+                    android:id="@+id/non_ac_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/nonac_toggle"
+                    android:layout_below="@+id/nonac_toggle"
+                    android:layout_marginTop="10dp"
+                    android:text="Non-Ac Bus"
+                    android:textStyle="bold" />
+                <ToggleButton
+                    android:id="@+id/ac_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/nonac_toggle"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/ac_toggle"
+                    android:textOff=""
+                    android:textOn=""
+                    />
+
+                <paztechnologies.com.meribus.custom_font.MyTextView_Lato
+                    android:id="@+id/ac_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ac_toggle"
+                    android:layout_below="@+id/ac_toggle"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Ac Bus"
+                    android:textStyle="bold" />
+                <ToggleButton
+                    android:id="@+id/e_riksha_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/e_riksha_toggle"
+
+                    android:textOff=""
+                    android:textOn=""
+
+                    />
+
+                <paztechnologies.com.meribus.custom_font.MyTextView_Lato
+                    android:id="@+id/e_riksha_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/e_riksha_toggle"
+                    android:layout_below="@+id/e_riksha_toggle"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="E-Riksha"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+            <custom_font.MyTextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+
+                android:text="Total Amount: Rs "/>
+            <custom_font.MyTextView
+                android:id="@+id/amount"
+                android:layout_toRightOf="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt"
+                android:text="0"
+                android:textColor="#ffffff"
+                android:textSize="20dp"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/select_ride_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/select_ride_custom"
+            android:text="Place Your Ride"
+            android:textSize="18dp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+</ScrollView>

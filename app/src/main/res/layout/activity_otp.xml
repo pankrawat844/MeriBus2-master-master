@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logbg"
+    tools:context="paztechnologies.com.meribus.OTP">
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="585dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/input_outline"
+        android:hint="Enter OTP"
+
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="16dp"
+        android:textColor="@color/textcolor"
+        android:textColorHint="@color/textcolor"
+        android:textSize="16dp"
+       android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:id="@+id/update_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/code"
+        android:background="@drawable/custom_edittext"
+        android:text="Submit"
+        android:textColor="#ffffff"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp" />
+</RelativeLayout>
